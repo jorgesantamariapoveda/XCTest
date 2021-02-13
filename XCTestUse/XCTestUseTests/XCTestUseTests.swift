@@ -2,11 +2,10 @@
 //  XCTestUseTests.swift
 //  XCTestUseTests
 //
-//  Created by Jorge on 12/02/2021.
+//  Created by Jorge on 13/02/2021.
 //
 
 import XCTest
-@testable import XCTestUse
 
 class XCTestUseTests: XCTestCase {
 
@@ -22,11 +21,12 @@ class XCTestUseTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
-    
+
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.
         }
     }
+
 }
