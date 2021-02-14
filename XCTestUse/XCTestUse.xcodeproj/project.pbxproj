@@ -13,7 +13,8 @@
 		CF14085125D8417600CDBA6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF14084F25D8417600CDBA6D /* Main.storyboard */; };
 		CF14085325D8417700CDBA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF14085225D8417700CDBA6D /* Assets.xcassets */; };
 		CF14085625D8417700CDBA6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF14085425D8417700CDBA6D /* LaunchScreen.storyboard */; };
-		CF14086525D8418900CDBA6D /* XCTestUseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF14086425D8418900CDBA6D /* XCTestUseTests.swift */; };
+		CFFF019625D9359800271B4A /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF019525D9359800271B4A /* Converter.swift */; };
+		CFFF019F25D9377200271B4A /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFF019E25D9377200271B4A /* ConverterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,9 @@
 		CF14085525D8417700CDBA6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF14085725D8417700CDBA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CF14086225D8418900CDBA6D /* XCTestUseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XCTestUseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF14086425D8418900CDBA6D /* XCTestUseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestUseTests.swift; sourceTree = "<group>"; };
 		CF14086625D8418900CDBA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFFF019525D9359800271B4A /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		CFFF019E25D9377200271B4A /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				CF14085225D8417700CDBA6D /* Assets.xcassets */,
 				CF14085425D8417700CDBA6D /* LaunchScreen.storyboard */,
 				CF14085725D8417700CDBA6D /* Info.plist */,
+				CFFF019925D936EE00271B4A /* xctest */,
 			);
 			path = XCTestUse;
 			sourceTree = "<group>";
@@ -93,10 +96,18 @@
 		CF14086325D8418900CDBA6D /* XCTestUseTests */ = {
 			isa = PBXGroup;
 			children = (
-				CF14086425D8418900CDBA6D /* XCTestUseTests.swift */,
 				CF14086625D8418900CDBA6D /* Info.plist */,
+				CFFF019E25D9377200271B4A /* ConverterTests.swift */,
 			);
 			path = XCTestUseTests;
+			sourceTree = "<group>";
+		};
+		CFFF019925D936EE00271B4A /* xctest */ = {
+			isa = PBXGroup;
+			children = (
+				CFFF019525D9359800271B4A /* Converter.swift */,
+			);
+			path = xctest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 					};
 					CF14086125D8418900CDBA6D = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = CF14084525D8417600CDBA6D;
 					};
 				};
@@ -201,6 +213,7 @@
 			files = (
 				CF14084E25D8417600CDBA6D /* ViewController.swift in Sources */,
 				CF14084A25D8417600CDBA6D /* AppDelegate.swift in Sources */,
+				CFFF019625D9359800271B4A /* Converter.swift in Sources */,
 				CF14084C25D8417600CDBA6D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,7 +222,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF14086525D8418900CDBA6D /* XCTestUseTests.swift in Sources */,
+				CFFF019F25D9377200271B4A /* ConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9L3PPN38N6;
 				INFOPLIST_FILE = XCTestUseTests/Info.plist;
@@ -411,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.jsantamariap.XCTestUseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/XCTestUse.app/XCTestUse";
@@ -421,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9L3PPN38N6;
 				INFOPLIST_FILE = XCTestUseTests/Info.plist;

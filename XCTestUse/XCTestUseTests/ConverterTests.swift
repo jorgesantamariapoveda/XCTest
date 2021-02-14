@@ -6,27 +6,42 @@
 //
 
 import XCTest
+@testable import XCTestUse
 
 class ConverterTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    var sut: Converter! //sut: system or subject under test
+
+    override func setUp() {
+        sut = Converter()
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    override func tearDown() {
+        sut = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func test_constructorByDefault_NoParams_OkResult() {
+        XCTAssertNotNil(sut, "Constructor fail")
     }
 
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func test_celsiusToFahrenheit_InputCorrect_OkResult() {
+        //Given
+        let celsius: Double = 38
+        let fahrenheit: Double = 100.4
+        //When
+        let result = sut.celsiusToFahrenheit(celsius: celsius)
+        //Then
+        XCTAssertEqual(fahrenheit, result, accuracy: 0.001)
+    }
+
+    func test_fahrenheitToCelsius_InputCorrect_OkResult() {
+        //Given
+        let fahrenheit: Double = 0
+        let celsius: Double = -17.778
+        //When
+        let result = sut.fahrenheitToCelsius(fahrenheit: fahrenheit)
+        //Then
+        XCTAssertEqual(celsius, result, accuracy: 0.001)
     }
 
 }
