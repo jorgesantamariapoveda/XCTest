@@ -6,8 +6,9 @@ Investigating the use of tests.
 - Code Coverage
 > Xcode
 > 
-> - Product-Scheme-Edit Scheme-Test-Options(check Code Coverage).
-> - After view result in "Show the report Navigator" or Cmd 9.
+>> Product-Scheme-Edit Scheme-Test-Options(check Code Coverage).
+>> 
+>> After view result in "Show the report Navigator" or Cmd 9.
 
 ### Resources
 [XCTest | Apple Developer Documentation](https://developer.apple.com/documentation/xctest)
