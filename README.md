@@ -1,5 +1,5 @@
 # XCTest
-Investigating the use of tests.
+Investigating the use of **unit tests** with XCTest (Apple's native framework).
 
 - Pattern Given-When-Then
 
